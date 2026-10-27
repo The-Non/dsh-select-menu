@@ -1,0 +1,31 @@
+{
+  "name": "dsh-select-menu",
+  "version": "0.2.0",
+  "private": true,
+  "description": "DSH Web 对话区选中文字后弹出【复制 / 追问（引用·解释一下）】浮层；引用显示在输入框上方副栏，回车发送时自动带上引文",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Non/dsh-select-menu.git"
+  },
+  "homepage": "https://github.com/The-Non/dsh-select-menu#readme",
+  "bugs": {
+    "url": "https://github.com/The-Non/dsh-select-menu/issues"
+  }
+}

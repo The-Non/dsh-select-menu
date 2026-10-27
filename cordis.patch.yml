@@ -1,0 +1,5 @@
+# dsh-select-menu bundle patch
+# 把本插件插进 profile 的配置树（和 dsh-whale-widget 同一套写法）
+- insert:
+    - id: dsh-select-menu
+      name: dsh-select-menu
