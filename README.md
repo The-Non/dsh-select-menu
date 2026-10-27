@@ -40,6 +40,22 @@ pnpm add "link:./local-plugins/dsh-select-menu"
 }
 ```
 
+### 从 GitHub 安装（推荐）
+
+```bash
+# 用 DSH 的插件命令（会自己写依赖、跑 pnpm、并登记到 profile 的 bundles）
+dsh plugin --profile desktop add https://github.com/The-Non/dsh-select-menu
+
+# 或者手工等价做法
+cd ~/.dsh/profiles/desktop
+pnpm add "github:The-Non/dsh-select-menu"
+# 然后把 dsh-select-menu 加进 package.json 的 dsh.profile.bundles，重启 DSH
+```
+
+### 开发时热改
+
+宿主每次收到脚本请求都**现读磁盘**，所以改 `assets/select-menu.js` 之后只要刷新页面（Ctrl+R）即可，不必重启 DSH。改 `lib/index.js`（宿主侧）才需要重启。
+
 ## 卸载
 
 - 从 `dsh.profile.bundles` 里删掉 `dsh-select-menu`，再 `pnpm remove dsh-select-menu`
